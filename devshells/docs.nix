@@ -13,10 +13,9 @@ pkgs.mkShell {
     # Locate docs dir (build)
     DOCS_DIR=$(dirname "$(readlink -f "$0")")
     DOCS_DIR="''${DOCS_DIR%/docs*}/docs"
-    echo $DOCS_DIR
 
     # Symlink pandoc-templates into docs dir
-    mkdir "$DOCS_DIR/pandoc-templates"
+    mkdir -p "$DOCS_DIR/pandoc-templates"
     ln -sf ${resources-root}/pandoc-templates/docs.html "$DOCS_DIR/pandoc-templates"
     ln -sf ${resources-root}/pandoc-templates/docs.css "$DOCS_DIR/pandoc-templates"
 
