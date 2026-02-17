@@ -10,6 +10,7 @@ pkgs.mkShell {
     mkdir -p ~/.local/share/tern/converters
     ln -sf ${resources-root}/tern-converters/pandoc.lua ~/.local/share/tern/converters/pandoc.lua
     ln -sf ${resources-root}/tern-converters/structurizr.lua ~/.local/share/tern/converters/structurizr.lua
+    ln -sf ${resources-root}/tern-converters/plantuml.lua ~/.local/share/tern/converters/plantuml.lua
 
     # Locate docs dir (build)
     ROOT_DIR=$(dirname "$(readlink -f "$0")")
